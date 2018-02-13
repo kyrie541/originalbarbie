@@ -1,5 +1,5 @@
-<h1>Create a New Articles!</h1>
-<%= form_for :article, url: articles_path do |f| %>
+<h1>Edit Article</h1>
+<%= form_with(model: @article) do |f| %>
 	<p>
 		<%= f.label :title %><br>
 		<%= f.text_field :title %>
