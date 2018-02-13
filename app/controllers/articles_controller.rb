@@ -4,6 +4,7 @@ class ArticlesController < ApplicationController
 	end
 
 	def new
+		@article = Article.new
 	end 
 
 	def show
@@ -26,8 +27,11 @@ class ArticlesController < ApplicationController
 	def create
 		# render plain:params[:article].inspect
 		@article = Article.new(article_params)
-		@article.save
-		redirect_to @article
+		if @article.save
+			redirect_to @article
+		else
+			render 'new'
+		end
 	end
 
 	def destroy
