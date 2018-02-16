@@ -13,15 +13,55 @@
  */
 
 @import "bootstrap";
+@import "welcome";
+@import "navigation";
+@import "footer";
+
+body {
+  min-height: 50rem;
+  padding-top: 4.5rem;
+  background-color: #e7d5ef;
+  overflow-x: hidden;
+}
 
 .container{
 	padding-top:15px;
 }
 
+.white{
+	color: #ffffff;
+}
+
+.grey{
+	color: #ddcccc;
+}
+
+.small-font{
+	font-size: 11px;
+}
+
+.linktxt{
+	color: #deddee;
+}
+
+.linktxt:hover{
+	color: #ffffff;
+}
+
 thead{
-	background-color: #dddddd;
+	background-color: #553344;
+	color: #ffffff;
 }
 
 .form-control{
 	background-color: #efeeef;
+	border: 3px solid #54acfc;
+}
+
+.btn-light{
+	border: 3px solid #54acfc;
+}
+
+.jumbotron{
+	background-color: #a853fc;
 }

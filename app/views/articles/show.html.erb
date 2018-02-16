@@ -2,18 +2,19 @@
 <div class="col"></div>
 <div class="col-md-7">
 
-<p><strong>Title:</strong>
-	<%= @article.title %>
+<%= image_tag 'rain.jpg', style:"width:100%;" %>
+
+<p>
+<h2>TITLE:</h2>
+	<strong><%= @article.title %></strong>
 </p>
 
 <p>
-	<%= @article.created_at %>
+	<%= @article.created_at.strftime('%A %-b %-d, %Y |%l :%M %p') %>
 </p>
 
 <p>
-	<strong>
-		Text:
-	</strong>
+	<h3>ARTICLE</h3>
 	<%= @article.text %>
 </p>
 <hr>
