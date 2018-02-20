@@ -58,10 +58,59 @@ thead{
 	border: 3px solid #54acfc;
 }
 
+.form-control2 select {
+  display: block;
+  width: 100%;
+  padding: 0.375rem 0.75rem;
+  padding-left: 0.3rem;
+  line-height: 1.5;
+  color: #777777;
+  background-clip: padding-box;
+  border-radius: 0.25rem;
+  background-color: #efeeef;
+  border: 3px solid #54acfc;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.sm_style{
+	font-size: 12px;
+	margin-bottom: 3px;
+}
+
 .btn-light{
 	border: 3px solid #54acfc;
 }
 
 .jumbotron{
 	background-color: #a853fc;
+}
+
+.show_notice{
+	margin: auto;
+	width: 300px;
+	color: #009900;
+	font-size: 18px;
+	padding: 15px;
+	background-color: #ccddcc;
+	text-align: center;
+}
+
+.show_alert{
+	margin: auto;
+	width: 300px;
+	color: #ff0000;
+	font-size: 18px;
+	padding: 15px;
+	background-color: #ddcccc;
+	text-align: center;
+}
+
+@media (max-width: 576px)
+{
+	.show_notice{
+		width: 100%;
+	}
+	.show_alert{
+		width: 100%;
+	}
 }
