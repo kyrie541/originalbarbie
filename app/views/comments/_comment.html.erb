@@ -14,11 +14,13 @@
 		<%= comment.body %>
 	</p>
 
+	<% if current_user && current_user.admin? %>
 	<p>
 		<%= link_to 'Delete Comment', [comment.article, comment],
 		class: 'btn btn-sm btn-danger',
 		method: :Delete,
 		data: {confirm: 'Are you certain??'} %>
 	</p>
+	<% end %>
 
 <% end %>

@@ -15,6 +15,34 @@
           <li class="nav-item">
             <a class="nav-link disabled" href="#">About</a>
           </li>
+
+          <% if current_user && current_user.admin?%>
+            <li class="nav-item">
+              <%= active_link_to 'Subscribers', 'subscribers', 'index', subscribers_path, 'active_nav-link' %>
+            </li>
+            <li class="nav-item">
+              <%= link_to 'Sign Out', session_path('active'), method: :delete, class: "active_nav-link" %> 
+            </li>
+            <li class="nav-link">
+                Hi, Admin! <%= current_user.userid %>
+            </li>
+          <% elsif current_user %> 
+            <!-- not for admin,for regular user -->
+            <li class="nav-item">
+              <%= link_to 'Sign Out', session_path('active'), method: :delete, class: "active_nav-link" %> 
+            </li>
+            <li class="nav-link">
+                Hi, <%= current_user.userid %>
+            </li>
+          <% else %>
+            <li class="nav-item">
+              <%= link_to 'Sign In', new_session_path, class: "active_nav-link" %> 
+            </li>
+            <li class="nav-item">
+              <%= link_to 'Sign up', new_user_path, class: "active_nav-link" %> 
+            </li>
+          <% end %>
+          
         </ul>
         <div class="form-inline mt-2 mt-md-0">
           <%= form_tag search_articles_path, method: :get do %>

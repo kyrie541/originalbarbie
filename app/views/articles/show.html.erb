@@ -21,11 +21,14 @@
 
 <%= render 'comments/comment' %>
 
+<% if current_user %>
 <hr>
-
 <%= render 'comments/form' %>
+<% else %>
+  Please <%= link_to 'Sign In', new_session_path %> or <%= link_to 'Sign Up', new_user_path %> to create a comment
+<% end %> 
 
-<p><%= link_to 'Back', articles_path, class: 'btn btn-md btn-info' %>
+<p><br><%= link_to 'Back', articles_path, class: 'btn btn-md btn-info' %>
 <%= link_to 'Home', welcome_index_path, class: 'btn btn-md btn-primary' %></p>
 
 </div> <!-- .col-md-7 -->
