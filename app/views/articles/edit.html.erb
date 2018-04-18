@@ -3,7 +3,7 @@
 <div class="col-md-7">
 
 <h1>Edit Article</h1>
-<%= form_with(model: @article) do |f| %>
+<%= form_for @article, html: {multipart: true} do |f| %>
 	<p>
 		<%= f.label :title %><br>
 		<%= f.text_field :title, class: 'form-control' %>
@@ -11,6 +11,18 @@
 	<p>
 		<%= f.label :text %><br>
 		<%= f.text_area :text, class: 'form-control' %>
+	</p>
+	<p>
+		<%= f.label :photo %><br>
+		<%= f.file_field :photo, class:'form-control' %>
+	</p>
+	<p>
+		<%= f.label :music %><br>
+		<%= f.file_field :music, class:'form-control' %>
+	</p>
+	<p>
+		<%= f.label :movie %><br>
+		<%= f.file_field :movie, class:'form-control' %>
 	</p>
 	<p>
 		<%= f.submit class: 'btn btn-lg btn-success'%>

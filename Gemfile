@@ -37,6 +37,10 @@ gem 'jquery-rails', '~> 4.3', '>= 4.3.1'
 
 gem 'paperclip', '~> 6.0'
 
+gem 'paperclip-av-transcoder', '~> 0.6.4'
+
+gem 'aws-sdk-s3', '~> 1.9'
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 

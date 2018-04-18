@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180322143138) do
+ActiveRecord::Schema.define(version: 20180417151023) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -20,6 +20,18 @@ ActiveRecord::Schema.define(version: 20180322143138) do
     t.text "text"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "photo_file_name"
+    t.string "photo_content_type"
+    t.integer "photo_file_size"
+    t.datetime "photo_updated_at"
+    t.string "music_file_name"
+    t.string "music_content_type"
+    t.integer "music_file_size"
+    t.datetime "music_updated_at"
+    t.string "movie_file_name"
+    t.string "movie_content_type"
+    t.integer "movie_file_size"
+    t.datetime "movie_updated_at"
   end
 
   create_table "comments", force: :cascade do |t|
