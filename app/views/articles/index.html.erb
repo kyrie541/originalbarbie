@@ -11,6 +11,8 @@
 <table class="table table-hover table-striped table-responsive-xs">
 	<thead>
 	<tr>
+		<th>Photo</th>
+		<th>Date</th>
 		<th>Title</th>
 		<th>Text</th>
 	<% if current_user && current_user.admin? %>
@@ -24,6 +26,16 @@
 	<tbody>
 	<% @articles.each do |article| %> 
 		<tr>
+			<td>
+				<% if article.photo.present? %>
+				<%= image_tag article.photo.url(:thumb) %>
+				<% else %>
+				<%= image_tag 'noimage.png', style:"width:50px;" %>
+				<% end %>
+			</td>
+			<td>
+				<%= article.created_at.strftime('%m/%d/%Y') %>
+			</td>
 			<td>
 				<%= article.title %> 
 			</td>

@@ -5,7 +5,7 @@ class ArticlesController < ApplicationController
 before_action :admin_authorize, :except => [:index, :show, :search]
 
 	def index
-		@articles = Article.all
+		@articles = Article.all.reverse
 	end
 
 	def new
